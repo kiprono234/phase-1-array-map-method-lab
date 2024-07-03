@@ -1,16 +1,20 @@
 const tutorials = [
-  'what does the this keyword mean?',
-  'What is the Constructor OO pattern?',
-  'implementing Blockchain Web API',
+  "what Does The This keyword mean?",
+  "What is The Constructor OO Pattern?",
+  "Implementing Blockchain Web API",
   'The Test Driven Development Workflow',
-  'What is NaN and how Can we Check for it',
-  'What is the difference between stopPropagation and preventDefault?',
-  'Immutable State and Pure Functions',
-  'what is the difference between == and ===?',
-  'what is the difference between event capturing and bubbling?',
-  'what is JSONP?'
+  "What is NaN and How Can We Check For It",
+  "What is the Difference Between StopPropagation and PreventDefault?",
+  "Immutable State and Pure Functions",
+  "What is The Difference Between == And ===?",
+  "What is The Difference Between Event Capturing and Bubbling?",
+  "What is JSONP?"
 ];
-
-const titleCased = () => {
-  return tutorials
+function titleCased() {
+  return tutorials.map(tutorial => {
+    return tutorial
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  });
 }
